@@ -1,0 +1,8 @@
+.banner-Container img{
+    height: 90vh;
+    object-fit: cover;
+    
+}
+.banner-Container{
+    margin-bottom: 2rem;
+}

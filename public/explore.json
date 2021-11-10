@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "BMW",
+        "desc": "The luxury automotive division of The Daimler Group, Mercedes-Benz takes the second spot on our list of the most popular luxury car brands.",
+        "image": "https://i.ibb.co/1Jnwr6N/car1.jpg",
+        "Price": 50000
+    },
+
+    {
+        "id": 2,
+        "name": "Audi",
+        "desc": "As a manufacturer, Audi comes in at 34th/40 on the Reliability Index, indicating that it is Audi reliability is well below average.",
+        "image": "https://i.ibb.co/1LgwxJx/car2.jpg",
+        "Price": 35000
+    },
+    
+    {
+        "id": 3,
+        "name": "Tesla",
+        "desc": "Tesla's mission is to accelerate the world's transition to sustainable energy through increasingly affordable electric vehicles.",
+        "image": "https://i.ibb.co/bX6Rx0b/car3.jpg",
+        "Price": 28000
+    },
+
+    {
+        "id": 4,
+        "name": "Porsche",
+        "desc": "The brand attributes much of this to its ever-growing model range, focusing especially heavily on the first fully electric Porsche.",
+        "image": "https://i.ibb.co/tQgcXVd/car4.jpg",
+        "Price": 32000
+    },
+    {
+        "id": 5,
+        "name": "Lexus",
+        "desc": "Tech-laden” is the best way to sum up Lexus’ year in the automobile industry. While the brand hasn’t quite reached the top.",
+        "image": "https://i.ibb.co/WfRSP43/car5.jpg",
+        "Price": 50999
+    },
+
+    {
+        "id": 6,
+        "name": "Volvo",
+        "desc": "From the addition of five more of its models to the IIHS Top Safety Pick Plus list, to its increased paid parental leave.",
+        "image": "https://i.ibb.co/CBQ9jkh/car6.jpg",
+        "Price": 25000
+    },
+    
+    {
+        "id": 7,
+        "name": "Lamborghini",
+        "desc": "Lamborghini boasted record profits in 2020, delivering 7,430 cars globally with profits of $1.9 billion.",
+        "image": "https://i.ibb.co/p0n4xRC/car7.jpg",
+        "Price": 46000
+    },
+
+    {
+        "id": 8,
+        "name": "Ferrari",
+        "desc": "Ferrari Purosangue – the brand’s first-ever luxury SUV, in a move that came fairly unexpectedly.",
+        "image": "https://i.ibb.co/Zdtb2WD/car8.jpg",
+        "Price": 30000
+    },
+    {
+        "id": 9,
+        "name": "Land Rover",
+        "desc": "Land Rover is determined to stay one step ahead.The British car manufacturer remains one of the most popular luxury car.",
+        "image": "https://i.ibb.co/YR0Tyw2/car9.jpg",
+        "Price": 57000
+    },
+
+    {
+        "id": 10,
+        "name": "Jaguar",
+        "desc": " Contactless ‘predictive touch’ touchscreens, virus-fighting technology across the wider brand and the launch of the Jaguar.",
+        "image": "https://i.ibb.co/F0szyGG/car10.jpg",
+        "Price": 22000
+    }
+]

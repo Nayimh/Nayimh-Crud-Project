@@ -1,0 +1,35 @@
+.carsContainer{
+    margin-top: 3rem;
+    
+
+   
+}
+
+.carcard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    
+}
+
+.header{
+    letter-spacing: 3px;
+    font-weight: 700;
+    background-color: orangered;
+    padding: 2rem;
+    color: wheat;
+    margin-bottom: 2rem;
+}
+
+
+@media only screen and (max-width: 689px){
+    .carcard{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 690px) and (max-width: 991px){
+    .carcard{
+        grid-template-columns: repeat(1, 2fr);
+    }
+    }

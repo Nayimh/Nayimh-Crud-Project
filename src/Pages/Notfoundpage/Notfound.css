@@ -1,0 +1,12 @@
+.notFoundContainer{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.headtext{
+    background-color: orangered;
+    font-weight: 900;
+    letter-spacing: 5px;
+    padding: 5rem;
+}

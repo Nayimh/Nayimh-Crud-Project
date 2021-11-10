@@ -1,0 +1,17 @@
+.singleCar{
+    margin-top: 5rem;
+}
+
+.btn{
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: orangered;
+    color: wheat;
+    font-weight: 600;
+}
+
+.btn:hover{
+    background-color: wheat;
+    color: orangered;
+    border: 1px solid orangered
+}

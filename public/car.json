@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "BMW",
+        "desc": "The luxury automotive division of The Daimler Group, Mercedes-Benz takes the second spot on our list of the most popular luxury car brands.",
+        "image": "https://i.ibb.co/1Jnwr6N/car1.jpg",
+        "Price": 50000
+    },
+
+    {
+        "id": 2,
+        "name": "Audi",
+        "desc": "As a manufacturer, Audi comes in at 34th/40 on the Reliability Index, indicating that it is Audi reliability is well below average.",
+        "image": "https://i.ibb.co/1LgwxJx/car2.jpg",
+        "Price": 35000
+    },
+    
+    {
+        "id": 3,
+        "name": "Tesla",
+        "desc": "Tesla's mission is to accelerate the world's transition to sustainable energy through increasingly affordable electric vehicles.",
+        "image": "https://i.ibb.co/bX6Rx0b/car3.jpg",
+        "Price": 28000
+    },
+
+    {
+        "id": 4,
+        "name": "Porsche",
+        "desc": "The brand attributes much of this to its ever-growing model range, focusing especially heavily on the first fully electric Porsche.",
+        "image": "https://i.ibb.co/tQgcXVd/car4.jpg",
+        "Price": 32000
+    },
+    {
+        "id": 5,
+        "name": "Lexus",
+        "desc": "Tech-laden” is the best way to sum up Lexus’ year in the automobile industry. While the brand hasn’t quite reached the top.",
+        "image": "https://i.ibb.co/WfRSP43/car5.jpg",
+        "Price": 50999
+    },
+
+    {
+        "id": 6,
+        "name": "Volvo",
+        "desc": "From the addition of five more of its models to the IIHS Top Safety Pick Plus list, to its increased paid parental leave.",
+        "image": "https://i.ibb.co/CBQ9jkh/car6.jpg",
+        "Price": 25000
+    }
+    
+    
+   
+]
