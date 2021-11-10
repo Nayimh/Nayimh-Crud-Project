@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const SinglePurchase = (props) => {
-    const { name, desc, image, Price } = props.car;
+    const { name, desc, image, Price, id } = props.car;
     return (
         <div className="singleCar">
             <Card style={{ width: '18rem' }}>
@@ -17,7 +17,7 @@ const SinglePurchase = (props) => {
   </Card.Body>
   
   <Card.Body>
-  <NavLink to="/Details"><button className="btn">Purchase</button></NavLink>
+  <NavLink to={`/purchase/${id}`}><button className="btn">Purchase</button></NavLink>
   </Card.Body>
 </Card>
         </div>

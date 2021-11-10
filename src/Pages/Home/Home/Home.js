@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactForm from '../../Contactform/ContactForm';
+import Footter from '../../Footer/Footter';
 import Ratings from '../../Ratings/Ratings/Ratings';
 
 import Banner from '../Banner/Banner';
@@ -13,6 +14,7 @@ const Home = () => {
             <Cars></Cars>
             <Ratings></Ratings>
             <ContactForm></ContactForm>
+            <Footter></Footter>
         </div>
     );
 };

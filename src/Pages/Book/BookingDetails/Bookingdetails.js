@@ -1,12 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import './SingleCar.css'
 
-const SingleCar = (props) => {
-    const { name, desc, image, Price, id } = props.car;
+const Bookingdetails = (props) => {
+    const { name, desc, image, Price} = props.car;
     return (
-        <div className="singleCar">
+        <div className="my-5 pt-5">
             <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={image} />
   <Card.Body>
@@ -17,12 +15,10 @@ const SingleCar = (props) => {
     </Card.Text>
   </Card.Body>
   
-  <Card.Body>
-    <NavLink to={`/purchase/${id}`}><button className="btn">Purchase</button></NavLink>
-  </Card.Body>
+ 
 </Card>
         </div>
     );
 };
 
-export default SingleCar;
+export default Bookingdetails;
