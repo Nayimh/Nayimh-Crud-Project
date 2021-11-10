@@ -5,7 +5,7 @@ const PurchasePage = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch('explore.json')
+        fetch('https://desolate-garden-12224.herokuapp.com/exploreCars')
             .then(res => res.json())
             .then(data => setCars(data))
     } ,[])

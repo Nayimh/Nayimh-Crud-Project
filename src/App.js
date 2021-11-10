@@ -13,6 +13,8 @@ import Ratings from './Pages/Ratings/Ratings/Ratings';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './hooks/Context/AuthProvider/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import MyOrder from './Pages/MyOrder/MyOrder';
 
 
 
@@ -29,12 +31,15 @@ function App() {
           <Route path="/explore">
           <PurchasePage></PurchasePage>
           </Route>
-          <Route path="/purchase/:carId"> 
+          <PrivateRoute path="/purchase/:carId"> 
             <Booking></Booking>
-          </Route>
-          <Route path="/dashBoard">
+          </PrivateRoute>
+          <PrivateRoute path="/dashBoard">
             <DashBoard></DashBoard>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/myOrder">
+            <MyOrder></MyOrder>
+          </PrivateRoute>
           <Route path="/rating">
             <Ratings></Ratings>
          </Route>

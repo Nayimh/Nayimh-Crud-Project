@@ -1,13 +1,15 @@
 import { Alert, CircularProgress, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logimg from '../../../images/banner2.jpg'
 
 const Register = () => {
 
     const [loginData, setLoginData] = useState({});
+
+    const history = useHistory();
 
     const { registerUser, isLoading, user, authError } = useAuth();
 
@@ -25,7 +27,7 @@ const Register = () => {
             e.preventDefault();
             return;
         }
-        registerUser( loginData.email, loginData.password)
+        registerUser( loginData.email, loginData.password, loginData.name, history)
         e.preventDefault();
     }
 

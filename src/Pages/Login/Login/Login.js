@@ -2,7 +2,7 @@ import { CircularProgress, Grid, TextField, Typography } from '@mui/material';
 
 import React, { useState } from 'react';
 import { Alert, Container } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 import logimg from '../../../images/banner2.jpg'
@@ -12,7 +12,11 @@ const Login = () => {
 
     const [loginData, setLoginData] = useState({});
 
-    const { user, loginUser, isLoading, authError } = useAuth();
+    const { user, loginUser, isLoading, authError, signInUsingGoogle } = useAuth();
+
+    const location = useLocation();
+    const history = useHistory();
+
 
     const handleOnchange = e => {
         const field = e.target.name;
@@ -23,8 +27,12 @@ const Login = () => {
     }
 
     const handleLoginSubmit = e => {
-        loginUser(loginData.email, loginData.password);
+        loginUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
+    }
+
+    const handleGooglesignIn = () => {
+        signInUsingGoogle(location, history)
     }
 
 
@@ -45,6 +53,9 @@ const Login = () => {
                             <button  type="submit"  className="btn">Login</button>
                            
                         </form>} <br />
+                        <p>------------------------------------------------------</p>
+                        <button onClick={handleGooglesignIn} className="btn">Google SignIn</button>
+                        <br /> <br />
                         {isLoading && <CircularProgress />}
                         {authError ? <Alert severity="error">{ authError }</Alert> : " "}
                         {user?.email ? <Alert severity="success">Success</Alert> : " "}
