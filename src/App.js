@@ -14,8 +14,8 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './hooks/Context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-import MyOrder from './Pages/MyOrder/MyOrder';
-import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
+import MyOrder from './Pages/DashBoard/MyOrder/MyOrder';
+import ManageAllOrders from './Pages/DashBoard/Dashboard/ManageAllOrders/ManageAllOrders';
 
 
 

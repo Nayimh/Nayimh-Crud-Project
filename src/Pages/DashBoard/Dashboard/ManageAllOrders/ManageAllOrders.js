@@ -2,17 +2,39 @@ import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 
 const ManageAllOrders = () => {
-    const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([]);
+  
 
     useEffect(() => {
         fetch('https://desolate-garden-12224.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
-    } ,[])
+    }, [])
+  
+  
+    const handleOrderDelete = (id) => {
+      const proceed = window.confirm(
+        "Are you sure?"
+      );
+      if (proceed) {
+        const url = `https://desolate-garden-12224.herokuapp.com/orders/${id}`;
+        fetch(url, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount) {
+              const remaining = orders.filter((order) => order._id !== id);
+              setOrders(remaining);
+            }
+          });
+      }
+    };
+  
 
 
     return (
-        <div className="mt-2 py-5">
+        <div>
             <h1 className="header">Manage All Orders : { orders.length }</h1>
             <div className="carcard mb-5">
                 
@@ -26,7 +48,8 @@ const ManageAllOrders = () => {
                     {order.desc}
                   </Card.Text>
                 
-                  <button  className="btn">Cancel</button>
+                  <button onClick={()=> handleOrderDelete(order._id)} className="btn">Delete</button>
+                  
                 </Card.Body>
               </Card>)
                 }
@@ -35,4 +58,7 @@ const ManageAllOrders = () => {
     );
 };
 
+
 export default ManageAllOrders;
+
+

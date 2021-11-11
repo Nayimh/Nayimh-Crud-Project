@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
-import useAuth from '../../hooks/useAuth';
+import useAuth from '../../../hooks/useAuth';
 
 const MyOrder = () => {
     const [orders, setOrders] = useState([]);
@@ -39,7 +39,7 @@ const MyOrder = () => {
 
 
     return (
-        <div className="py-2 mt-5">
+        <div >
             <h1 className="header"> Orders</h1>
             <div className="carcard">
                 {

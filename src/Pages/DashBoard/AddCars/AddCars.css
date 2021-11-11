@@ -1,0 +1,29 @@
+.add-new-car form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-new-car form input,
+  textarea {
+    width: 50%;
+    margin: 5px 0px;
+    border-radius: 1px;
+    outline: none;
+    border: 1px solid orangered;
+    padding: 10px;
+  }
+  
+  .add-new-car .btn-submit {
+    background: orangered;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .add-new-car .btn-submit:hover {
+    background: orangered;
+  }
+  

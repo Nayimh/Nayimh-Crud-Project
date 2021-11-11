@@ -7,7 +7,8 @@ initializeFirebase();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsloading] = useState(true);
-    const [authError, setAuthError] = useState('');
+  const [authError, setAuthError] = useState('');
+  const [admin, setAdmin] = useState(false);
 
     const auth = getAuth();
 
@@ -19,7 +20,12 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             setAuthError('');
-            const newUser = { email, displayName: name };
+          const newUser = { email, displayName: name };
+          // set user to db
+          saveUser(email, name, 'POST');
+
+
+
             // send name to firebase after creation
             updateProfile(auth.currentUser, {
                 displayName: name
@@ -82,8 +88,10 @@ const useFirebase = () => {
         setIsloading(true);
         signInWithPopup(auth, googleProvider)
   .then((result) => {
-    
-   const user = result.user;
+    const destination = location?.state?.from || '/';
+    history.replace(destination);
+    const user = result.user;
+    saveUser(user.email, user.displayName, 'PUT');
    setAuthError('');
   }).catch((error) => {
     setAuthError(error.message);
@@ -104,10 +112,34 @@ const useFirebase = () => {
           })
           .finally(()=> setIsloading(false));
           
-    }
+  }
+
+  // admin filter
+  useEffect(() => {
+    fetch(`https://desolate-garden-12224.herokuapp.com/users/${user.email}`)
+      .then(res => res.json())
+      .then(data => setAdmin(data.admin))
+  } ,[user.email])
+
+
+  // save user to db
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch('https://desolate-garden-12224.herokuapp.com/users', {
+      method: method,
+      headers: {
+        'content-type' : 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+    .then()
+
+  }
+
 
     return {
         user,
+        admin,
         isLoading,
         registerUser,
         logout,
