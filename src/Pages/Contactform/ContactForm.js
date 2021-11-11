@@ -1,4 +1,4 @@
-import Button from '@restart/ui/esm/Button';
+
 import React from 'react';
 import { Form } from 'react-bootstrap';
 
@@ -22,10 +22,8 @@ const ContactForm = () => {
       placeholder="Leave a comment here"
       style={{ height: '100px' }}
     />
- 
-  <Button variant="primary" type="submit" className="my-2 card-btn">
-    Submit
-  </Button>
+ <br />
+  <button className="btn">Submit</button>
 </Form>
         </div>
     );

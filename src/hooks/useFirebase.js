@@ -7,7 +7,7 @@ initializeFirebase();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsloading] = useState(true);
-    const [authError, setAutuError] = useState('');
+    const [authError, setAuthError] = useState('');
 
     const auth = getAuth();
 
@@ -18,7 +18,7 @@ const useFirebase = () => {
         setIsloading(true);
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            setAutuError('');
+            setAuthError('');
             const newUser = { email, displayName: name };
             // send name to firebase after creation
             updateProfile(auth.currentUser, {
@@ -36,7 +36,7 @@ const useFirebase = () => {
           })
           .catch((error) => {
            
-            setAutuError(error.message);
+            setAuthError(error.message);
            
           })
             .finally(()=> setIsloading(false));
@@ -53,11 +53,11 @@ const useFirebase = () => {
 
       
       
-    setAutuError('');
+    setAuthError('');
   })
   .catch((error) => {
   
-    setAutuError(error.message);
+    setAuthError(error.message);
   })
   .finally(()=> setIsloading(false));
     }
@@ -84,9 +84,9 @@ const useFirebase = () => {
   .then((result) => {
     
    const user = result.user;
-   setAutuError('');
+   setAuthError('');
   }).catch((error) => {
-    setAutuError(error.message);
+    setAuthError(error.message);
   })
   .finally(()=> setIsloading(false));
     }

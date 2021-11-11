@@ -48,8 +48,8 @@ function DashBoard(props) {
           <Divider></Divider>
           <NavLink to="/home"><button className="btn">Home</button></NavLink> <br /> <br />
           <NavLink to="/explore"><button className="btn">Explore</button></NavLink> <br /> <br />
-          <NavLink to="/home"><button className="btn">Home</button></NavLink> <br /> <br />
           <NavLink to="/myOrder"><button className="btn">My Order</button></NavLink> <br /> <br />
+          <NavLink to="/manageOrder"><button className="btn">Manage Orders</button></NavLink> <br /> <br />
           <NavLink to="/rating"><button className="btn">Review</button></NavLink> <br /> <br />
     </div>
   );

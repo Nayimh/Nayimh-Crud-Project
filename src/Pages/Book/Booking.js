@@ -35,7 +35,7 @@ const handleOrderSubmit = (e) => {
     const price = car.Price;
     const ordersInfo = { email, carId, name, desc, img, price };
 
-    fetch("https://desolate-garden-12224.herokuapp.com/exploreCars", {
+    fetch("https://desolate-garden-12224.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -45,6 +45,7 @@ const handleOrderSubmit = (e) => {
     alert("Order has been placed successfully");
 
     e.target.reset();
+    e.preventDefault();
   };
 
 
@@ -54,7 +55,7 @@ const handleOrderSubmit = (e) => {
     <div className="pt-5 my-5 bookingContainer">
         
         <h1>car id : {carId}</h1>
-        <h2>Purchase your Dream Car</h2>
+            <h2 className="header">Purchase your Dream Car : { car?.name }</h2>
         <div className="carDetails">
                
         <Card style={{ width: '18rem' }}>

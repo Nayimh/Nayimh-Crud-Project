@@ -18,7 +18,7 @@ const Navigation = () => {
      
       
       <Nav.Link as={HashLink} to="/explore">Explore Cars</Nav.Link>
-      <Nav.Link as={HashLink} to="/purchase">Purchase</Nav.Link>
+      {/* <Nav.Link as={HashLink} to="/purchase">Purchase</Nav.Link> */}
    
       <Nav.Link as={HashLink} to="/dashBoard">DashBoard</Nav.Link>
  
@@ -30,9 +30,9 @@ const Navigation = () => {
                             { user?.displayName ? user?.displayName : user?.email} 
                  
         {
-                                    user?.email ?  <button onClick={logout} style={{color: 'white', background: 'tomato',  borderStyle: 'none'}}>Logout</button>
+                                    user?.email ?  <button onClick={logout} style={{color: 'white', background: 'tomato',  borderStyle: 'none' , marginLeft: '15px'}}>Logout</button>
                                         :
-                                        <NavLink to="/login"><button style={{color: 'white', background: 'tomato', borderStyle: 'none'}} className="login">Login</button></NavLink>
+                                        <NavLink to="/login"><button style={{color: 'white', background: 'tomato', borderStyle: 'none', marginLeft: '15px'}} className="login">Login</button></NavLink>
         }                   
                    
                     
