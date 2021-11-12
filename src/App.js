@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Pages/Home/Home/Home';
 import { BrowserRouter, Switch , Route } from 'react-router-dom';
 import PurchasePage from './Pages/Purchase/Purchasepage/PurchasePage';
-import Navigation from './Pages/shared/Navigaton/Navigation';
+// import Navigation from './Pages/shared/Navigaton/Navigation';
 import Notfoundpage from './Pages/Notfoundpage/Notfoundpage';
 
 import Booking from './Pages/Book/Booking';
@@ -14,8 +14,8 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './hooks/Context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-import MyOrder from './Pages/DashBoard/MyOrder/MyOrder';
-import ManageAllOrders from './Pages/DashBoard/Dashboard/ManageAllOrders/ManageAllOrders';
+// import MyOrder from './Pages/DashBoard/MyOrder/MyOrder';
+// import ManageAllOrders from './Pages/DashBoard/Dashboard/ManageAllOrders/ManageAllOrders';
 
 
 
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <AuthProvider>
       <BrowserRouter>
-        <Navigation></Navigation>
+        {/* <Navigation></Navigation> */}
         <Switch>
           <Route path="/home">
           <Home></Home>
@@ -38,12 +38,12 @@ function App() {
           <PrivateRoute path="/dashBoard">
             <DashBoard></DashBoard>
           </PrivateRoute>
-          <PrivateRoute path="/myOrder">
+          {/* <PrivateRoute path="/myOrder">
             <MyOrder></MyOrder>
           </PrivateRoute>
           <PrivateRoute path="/manageOrder">
             <ManageAllOrders></ManageAllOrders>
-          </PrivateRoute>
+          </PrivateRoute> */}
           <Route path="/rating">
             <Ratings></Ratings>
          </Route>

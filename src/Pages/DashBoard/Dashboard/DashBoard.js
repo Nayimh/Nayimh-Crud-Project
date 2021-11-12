@@ -29,12 +29,13 @@ import Addreview from '../Addreview/Addreview';
 import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
 
 
+
 const drawerWidth = 240;
 
 function DashBoard(props) {
 
   const { logout } = useAuth();
-  const { admin, user } = useAuth();
+  const { admin } = useAuth();
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -46,7 +47,8 @@ function DashBoard(props) {
   };
 
   const drawer = (
-    <div style={{height: "100vh"}}>
+    <div style={{ height: "100vh" }} sx={{ mt: 5, py: 5 }}>
+     
       <Toolbar />
       <h2 className="header" style={{ letterSpacing: "2px", fontWeight: "700" }}>Control Pannel</h2> 
       <Link to="/home"><button className="btn-warning border-0">Home</button></Link>
@@ -54,6 +56,7 @@ function DashBoard(props) {
       <Divider />
       
       <Divider></Divider>
+
       <br />
       {/* <Link to={`${url}/myOrder`}><button className="btn">My Order</button></Link> <br /> <br /> */}
       { admin ?
