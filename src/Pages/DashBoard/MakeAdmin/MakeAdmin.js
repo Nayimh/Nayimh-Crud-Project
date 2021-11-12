@@ -33,7 +33,7 @@ const MakeAdmin = () => {
         <div>
             <h2>Make Admin</h2>
             <form onSubmit={handleAdmin}>
-                <TextField onBlur={handleOnblur} label="Email" type="email" variant="standard" sx={{width: "30%"}}/> <button type="submit" className="btn">Submit</button>
+                <TextField onBlur={handleOnblur} label="Email" type="email" variant="standard" sx={{width: "50%"}}/> <button type="submit" className="btn">Submit</button>
             </form>
             {success && <Alert severity="success">Success</Alert>}
         </div>
