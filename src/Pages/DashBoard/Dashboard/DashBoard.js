@@ -107,7 +107,7 @@ function DashBoard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-          Expand DashBoard
+          {admin ? <div>Admin DashBorar</div> : <div>User DashBoard</div>}
           </Typography>
         </Toolbar>
       </AppBar>
