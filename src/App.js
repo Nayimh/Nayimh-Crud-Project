@@ -14,6 +14,8 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './hooks/Context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import ExploreCars from './Pages/ExploreCars/ExploreCars';
+import Navigation from './Pages/shared/Navigaton/Navigation';
+
 
 
 
@@ -23,7 +25,7 @@ function App() {
     <div className="App">
       <AuthProvider>
       <BrowserRouter>
-        {/* <Navigation></Navigation> */}
+       
         <Switch>
           <Route path="/home">
           <Home></Home>
@@ -31,18 +33,15 @@ function App() {
           <Route path="/explore">
           <ExploreCars></ExploreCars>
           </Route>
-          <PrivateRoute path="/purchase/:carId"> 
-            <Booking></Booking>
+            <PrivateRoute path="/purchase/:carId">
+              <Navigation></Navigation>
+              <Booking></Booking>
+             
           </PrivateRoute>
           <PrivateRoute path="/dashBoard">
             <DashBoard></DashBoard>
           </PrivateRoute>
-          {/* <PrivateRoute path="/myOrder">
-            <MyOrder></MyOrder>
-          </PrivateRoute>
-          <PrivateRoute path="/manageOrder">
-            <ManageAllOrders></ManageAllOrders>
-          </PrivateRoute> */}
+          
           <Route path="/rating">
             <Ratings></Ratings>
          </Route>

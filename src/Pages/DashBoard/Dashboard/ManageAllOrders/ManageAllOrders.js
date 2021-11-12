@@ -45,6 +45,7 @@ const ManageAllOrders = () => {
                 <Card.Body>
                         <Card.Title>Name: { order.name }</Card.Title>
                   <Card.Text>
+                       <p>Email: { order.email }</p>
                     {order.desc}
                   </Card.Text>
                 

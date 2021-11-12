@@ -47,7 +47,7 @@ const MyOrder = () => {
                 <Card.Img variant="top" src={order.img} />
                 <Card.Body>
                         <Card.Title>Name: { order.name }</Card.Title>
-                        <Card.Title>Email: { order.email }</Card.Title>
+                        
                   <Card.Text>
                     {order.desc}
                   </Card.Text>

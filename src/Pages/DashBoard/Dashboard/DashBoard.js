@@ -52,6 +52,7 @@ function DashBoard(props) {
       <Toolbar />
       <h2 className="header" style={{ letterSpacing: "2px", fontWeight: "700" }}>Control Pannel</h2> 
       <Link to="/home"><button className="btn-warning border-0">Home</button></Link>
+      
       <br /> <br />
       <Divider />
       
@@ -106,7 +107,7 @@ function DashBoard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            DashBoard
+          Expand DashBoard
           </Typography>
         </Toolbar>
       </AppBar>
@@ -189,4 +190,3 @@ DashBoard.propTypes = {
 
 export default DashBoard;
 
-// export default DashBoard;

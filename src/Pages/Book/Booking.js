@@ -52,9 +52,9 @@ const handleOrderSubmit = (e) => {
 
 
     return (
-    <div className="pt-5 my-5 bookingContainer">
+    <div className="pt-2 my-5 bookingContainer">
         
-        <h1>car id : {carId}</h1>
+        
             <h2 className="header">Purchase your Dream Car : { car?.name }</h2>
         <div className="carDetails">
                
