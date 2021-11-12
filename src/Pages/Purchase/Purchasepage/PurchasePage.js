@@ -12,7 +12,7 @@ const PurchasePage = () => {
 
     return (
         <div className="my-2 py-5">
-            <h3 className="header">Trending content near you {cars.length}</h3>
+            <h3 className="header">Trending Cars near you {cars.length}</h3>
             <div className="carcard">
                
                {
