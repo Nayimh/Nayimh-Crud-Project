@@ -13,14 +13,12 @@ const Navigation = () => {
   <Navbar.Brand href="/home"><span className="green">Uniquify -</span> <span className="tomato">X</span></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-                <Nav.Link as={HashLink} to="/home">Home</Nav.Link>
-     
-      
-      <Nav.Link as={HashLink} to="/explore">Explore Cars</Nav.Link>
-      {/* <Nav.Link as={HashLink} to="/purchase">Purchase</Nav.Link> */}
-   
-     {user && <Nav.Link as={HashLink} to="/dashBoard">DashBoard</Nav.Link>}
+              <Nav className="me-auto">
+                
+            
+      <Nav.Link as={HashLink} to="/home">Home</Nav.Link>
+      <Nav.Link as={HashLink} to="/explore">Explore Cars</Nav.Link>   
+      {user?.email && <Nav.Link as={HashLink} to="/dashBoard">DashBoard</Nav.Link>}
  
     </Nav>
     <Nav>
