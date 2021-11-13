@@ -20,7 +20,7 @@ const Navigation = () => {
       <Nav.Link as={HashLink} to="/explore">Explore Cars</Nav.Link>
       {/* <Nav.Link as={HashLink} to="/purchase">Purchase</Nav.Link> */}
    
-      <Nav.Link as={HashLink} to="/dashBoard">DashBoard</Nav.Link>
+     {user && <Nav.Link as={HashLink} to="/dashBoard">DashBoard</Nav.Link>}
  
     </Nav>
     <Nav>
