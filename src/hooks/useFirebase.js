@@ -88,7 +88,7 @@ const useFirebase = () => {
         setIsloading(true);
         signInWithPopup(auth, googleProvider)
   .then((result) => {
-    const destination = location?.state?.from || '/';
+    const destination = location?.state?.from || '/dashBoard';
     history.replace(destination);
     const user = result.user;
     saveUser(user.email, user.displayName, 'PUT');
